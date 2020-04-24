@@ -9,6 +9,7 @@ public class Perro {
 	private String sexo;
 	private String colorPelo;
 	private int peso;
+	private int anioVacuna;
 
 	//CONSTRUCTOR FROM SUPERCLASS:
 	public Perro() {
@@ -16,7 +17,7 @@ public class Perro {
 	}
 	
 	//CONSTRUCTOR WITH PARAMETHERS:
-	public Perro (String nombre, String raza, int edad, String sexo, String colorPelo, int peso) {
+	public Perro (String nombre, String raza, int edad, String sexo, String colorPelo, int peso, int anioVacuna) {
 		super();
 		this.nombre = nombre;
 		this.raza = raza;
@@ -24,6 +25,7 @@ public class Perro {
 		this.sexo = sexo;
 		this.colorPelo = colorPelo;
 		this.peso = peso;
+		this.anioVacuna = anioVacuna;
 		
 	}
 
@@ -74,6 +76,14 @@ public class Perro {
 
 	public void setPeso(int peso) {
 		this.peso = peso;
+	}
+	
+	public int getAnioVacuna() {
+		return anioVacuna;
+	}
+
+	public void setAnioVacuna(int anioVacuna) {
+		this.anioVacuna = anioVacuna;
 	}
 
 	//TOSTRING:

@@ -9,15 +9,25 @@ import operations.Helper;
 
 class TestPerro {
 
+	Perro perro = new Perro("Nuba", "mestizo", 15, "hembra", "negro y fuego", 12, 2019);
+	
 	@Test
-	void testCalculoAntibioticos() {
-		Perro p1 = new Perro("Nuba", "mestizo", 15, "hembra", "negro y fuego", 12);
-		assertEquals(150,Helper.calculoAntibioticos(p1));
+	void testCalculoAntibioticos() {		
+		assertEquals(150,Helper.calculoAntibioticos(perro));
 	}
 	
 	@Test
 	void testCalculoEdadHumana() {
-		Perro p2 = new Perro("Nuba", "mestizo", 15, "hembra", "negro y fuego", 12);
-		assertEquals(74.33,Helper.calculoEdadHumana(p2));
+		assertEquals(74.33,Helper.calculoEdadHumana(perro));
+	}
+	
+	@Test
+	void testCalculoPienso() {
+		assertEquals(100,Helper.calculoPienso(perro));
+	}
+	
+	@Test
+	void testComprobarVacuna() {
+		assertTrue(Helper.comprobarVacuna(perro) == false);
 	}
 }
